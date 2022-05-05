@@ -1,0 +1,68 @@
+<app-button-create [value]="dataSend"></app-button-create>
+<table mat-table [dataSource]="Players" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element" id="name{{element.id}}">
+          {{element.name}}
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="surname">
+      <th mat-header-cell *matHeaderCellDef>Apellido </th>
+      <td mat-cell *matCellDef="let element" id="surname{{element.id}}">
+        {{element.surname}}
+      </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef> Edad </th>
+      <td mat-cell *matCellDef="let element">
+          {{element.age}}
+        </td>
+    </ng-container>
+
+    <ng-container matColumnDef="team">
+        <th mat-header-cell *matHeaderCellDef> Equipo </th>
+        <td mat-cell *matCellDef="let element" style="width: 15%;">
+            {{element.team}}
+          </td>
+    </ng-container>
+
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> Posición </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.position}}
+          </td>
+    </ng-container>
+
+    <ng-container matColumnDef="value">
+        <th mat-header-cell *matHeaderCellDef> Valor de mercado </th>
+        <td mat-cell *matCellDef="let element">
+            {{element.value}}
+          </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Acción </th>
+      <td mat-cell *matCellDef="let element">
+        <a style="cursor:pointer" routerLink="/players/edit/{{element.id}}">
+            <mat-icon>
+                edit
+            </mat-icon> 
+        </a>
+        <a style="cursor:pointer">
+            <mat-icon (click)="deleteRow(element)" style="color:#e15639">
+                delete
+            </mat-icon>
+        </a>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+  <div id="error">
+  </div>

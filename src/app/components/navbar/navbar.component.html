@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a routerLink="/home"><h1>DRP</h1></a>
+      <span class="menu-spacer"></span>
+      <div class="items">
+        <a mat-button [routerLink]="'/home'"> Inicio </a>
+        <a mat-button [routerLink]="'/players/list'"> Players NBA </a>
+      </div>
+    </mat-toolbar-row>
+  
+</mat-toolbar>

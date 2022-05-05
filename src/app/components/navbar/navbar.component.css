@@ -1,0 +1,10 @@
+.items {
+    width: 100%;
+    text-align: right;
+    margin-right: 3%;
+}
+
+a {
+    text-decoration: none;
+    color:white;
+}

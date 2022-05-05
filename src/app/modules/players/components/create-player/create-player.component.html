@@ -1,0 +1,61 @@
+<form [formGroup]="myForm" (ngSubmit)="submit()" class="create-form" novalidate>
+    <h2>Crear jugador</h2>
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input formControlName="name" required matInput>
+        <mat-error *ngIf="myForm.get('name').touched && myForm.get('name').invalid">
+            <span *ngIf="myForm.get('name').hasError('required')">El nombre es obligatorio</span>
+            <span *ngIf="myForm.get('name').hasError('minlength')">El nombre debe tener como mínimo 2 caracteres</span>
+            <span *ngIf="myForm.get('name').hasError('maxlength')">El nombre debe tener como máximo 20 caracteres</span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input formControlName="surname" required matInput> 
+        <mat-error *ngIf="myForm.get('surname').touched && myForm.get('surname').invalid">
+            <span *ngIf="myForm.get('surname').hasError('required')">El apellido es obligatorio</span>
+            <span *ngIf="myForm.get('surname').hasError('minlength')">El apellido debe tener como mínimo 3 caracteres</span>
+            <span *ngIf="myForm.get('surname').hasError('maxlength')">El apellido debe tener como máximo 25 caracteres</span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Edad</mat-label>
+        <input formControlName="age" required type="number" matInput> 
+        <mat-error *ngIf="myForm.get('age').touched && myForm.get('age').invalid">
+            <span *ngIf="myForm.get('age').hasError('required')">La edad es obligatoria</span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Selecciona un equipo</mat-label>
+        <mat-select formControlName="team" required>
+          <mat-option *ngFor="let team of teams" [value]="team">
+            {{team}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="myForm.get('team').touched && myForm.get('team').invalid">
+            <span *ngIf="myForm.get('team').hasError('required')">El equipo es obligatorio</span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Selecciona una posición</mat-label>
+        <mat-select formControlName="position" required>
+          <mat-option *ngFor="let position of positions" [value]="position">
+            {{position}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="myForm.get('position').touched && myForm.get('position').invalid">
+            <span *ngIf="myForm.get('position').hasError('required')">La posición es obligatoria</span>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Valor de mercado</mat-label>
+        <input formControlName="value" required type="number" matInput> 
+        <mat-error *ngIf="myForm.get('value').touched && myForm.get('value').invalid">
+            <span *ngIf="myForm.get('value').hasError('required')">El valor de mercado es obligatorio</span>
+        </mat-error>
+    </mat-form-field>
+    <div style="margin-top:1%;" class="button-section">
+        <button [disabled]="!myForm.valid" type="submit" mat-raised-button color="primary">Crear jugador</button>
+    </div>
+</form>
+

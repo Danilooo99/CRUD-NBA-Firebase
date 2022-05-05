@@ -1,0 +1,36 @@
+.create-form {
+    margin:auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.create-form mat-form-field {
+    width: 30%;
+}
+
+.button-section {
+    margin:auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 5%;
+}
+
+textarea {
+    height: 170px;
+}
+
+mat-form-field {
+    margin-top: 1%;
+}
+
+@media screen and (max-width: 750px) {
+    .edit-form mat-form-field {
+        width: 50%;
+    }
+}
