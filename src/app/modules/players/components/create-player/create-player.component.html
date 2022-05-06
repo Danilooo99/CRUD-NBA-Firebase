@@ -1,5 +1,5 @@
 <form [formGroup]="myForm" (ngSubmit)="submit()" class="create-form" novalidate>
-    <h2>Crear jugador</h2>
+    <h2>Añadir jugador</h2>
     <mat-form-field appearance="fill">
         <mat-label>Nombre</mat-label>
         <input formControlName="name" required matInput>
@@ -55,7 +55,7 @@
         </mat-error>
     </mat-form-field>
     <div style="margin-top:1%;" class="button-section">
-        <button [disabled]="!myForm.valid" type="submit" mat-raised-button color="primary">Crear jugador</button>
+        <button [disabled]="!myForm.valid" type="submit" mat-raised-button color="primary">Añadir jugador</button>
     </div>
 </form>
 

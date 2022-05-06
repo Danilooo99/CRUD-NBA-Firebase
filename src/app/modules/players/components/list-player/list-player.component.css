@@ -3,8 +3,30 @@ table {
     margin:5% auto;
 }
 
+.paginator {
+    width: 90%;
+    margin:-5% auto;
+    margin-bottom: 3%;
+}
+
+.filter {
+    width: 90%;
+    margin:5% auto; 
+    margin-bottom:-5%;
+}
+
+.filter mat-form-field {
+    width: 100%;
+}
+
 #error {
     text-align:center;
     color:red;
+    margin-top: -2%;
+}
+
+#confirm {
+    text-align:center;
+    color:green;
     margin-top: -2%;
 }
