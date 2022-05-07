@@ -3,7 +3,6 @@ import { Player } from '../../models/player.model';
 import { PlayerService } from '../../services/player.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
-import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-list-player',
@@ -36,13 +35,8 @@ export class ListPlayerComponent implements OnInit, AfterViewInit {
         this.paginatorData(this.Players);
       }); 
 
-      if(localStorage.getItem("confirm")!==null){
-        const error = document.getElementById("error");
-        const confirm = document.getElementById('confirm');
-        confirm.innerHTML = `<p>${localStorage.getItem("confirm")}</p>`;
-        localStorage.clear();
-        error.innerHTML="";
-      }
+      this.messageAddPlayer();
+      this.messageUpdatePlayer()
   }
 
   ngAfterViewInit() {
@@ -52,9 +46,11 @@ export class ListPlayerComponent implements OnInit, AfterViewInit {
   deleteRow (player){
     const confirm = document.getElementById('confirm');
     const error = document.getElementById("error");
+    const edit = document.getElementById('edit');
     this.playerService.deletePlayer(player);
-    error.innerHTML = `<p>Se ha eliminado con éxito al jugador ${player.name} ${player.surname}</p>`;
+    error.innerHTML = `<div style='background-color:white;width:90%;margin:auto;'>Se ha eliminado con éxito al jugador ${player.name} ${player.surname}</div>`;
     confirm.innerHTML="";
+    edit.innerHTML="";
   } 
 
   paginatorData(Players){
@@ -65,5 +61,29 @@ export class ListPlayerComponent implements OnInit, AfterViewInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  messageAddPlayer(){
+    if(localStorage.getItem("confirm")!==null){
+      const error = document.getElementById("error");
+      const confirm = document.getElementById('confirm');
+      const edit = document.getElementById('edit');
+      confirm.innerHTML = `<div style='background-color:white;width:90%;margin:auto;'>${localStorage.getItem("confirm")}</div>`;
+      localStorage.removeItem('confirm');
+      error.innerHTML="";
+      edit.innerHTML="";
+    }
+  }
+
+  messageUpdatePlayer(){
+    if(localStorage.getItem("edit")!==null){
+      const error = document.getElementById("error");
+      const confirm = document.getElementById('confirm');
+      const edit = document.getElementById('edit');
+      edit.innerHTML = `<div style='background-color:white;width:90%;margin:auto;'>${localStorage.getItem("edit")}</div>`;
+      localStorage.removeItem('edit');
+      error.innerHTML="";
+      confirm.innerHTML="";
+    }
   }
 }

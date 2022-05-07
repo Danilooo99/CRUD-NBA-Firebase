@@ -1,0 +1,43 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-card {
+    margin-top: 18%;
+    margin-bottom:18%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:2%;
+}
+
+.register  {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top:-5%;
+}
+
+.error-style {
+    color:red;
+    margin-top:5%;
+    text-align: center;
+}

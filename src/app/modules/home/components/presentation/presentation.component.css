@@ -1,0 +1,134 @@
+/* Estilos para el componente presenttaion */
+
+.title {
+    margin-top: 5%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4em;
+    font-family: "Arial";
+    text-shadow: 0 1px 0 #ccc, 
+                 0 2px 0 #c9c9c9,
+                 0 3px 0 #bbb,
+                 0 4px 0 #b9b9b9,
+                 0 5px 0 #aaa,
+                 0 6px 1px rgba(0,0,0,.1),
+                 0 0 5px rgba(0,0,0,.1),
+                 0 1px 3px rgba(0,0,0,.3),
+                 0 3px 5px rgba(0,0,0,.2),
+                 0 5px 10px rgba(0,0,0,.25),
+                 0 10px 10px rgba(0,0,0,.2),
+                 0 20px 20px rgba(0,0,0,.15);
+    color: rgb(69, 111, 142);
+}
+
+mat-card {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.presentation {
+    width: 78%;
+    margin: 5% auto;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    font-size:1.2em;
+}
+
+.button-section {
+    margin:15% auto;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 45px;
+}
+
+.button-section button {
+    width: 55%;
+    height: 100%;
+}
+
+.image {
+    margin:5% auto;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    border-radius: 52%;
+    width: 60%;
+}
+
+@media screen and (max-width: 750px) {
+
+    .title {
+        margin-top: 9%;
+    }
+
+    .button-section {
+        margin-top: 9%;
+    }
+
+    .presentation {
+        margin-top: 9%;
+    }
+
+    .image {
+        margin-top: 9%;
+    }
+}
+
+@media screen and (max-width: 965px) {
+
+    .button-section {
+        margin-top:25%;
+        background-color: red;
+    }
+    
+    .image {
+        margin-top:12%;
+    }
+}
+
+@media screen and (max-width: 865px) {
+
+    .button-section {
+        margin-top:35%;
+        background-color: red;
+    }
+    
+    .image {
+        margin-top:25%;
+    }
+}
+
+@media screen and (max-width: 692px) {
+    
+    .button-section {
+        margin-top:45%;
+        background-color: red;
+    }
+
+    .image {
+        margin-top:35%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    
+    .button-section {
+        margin-top:70%;
+        background-color: red;
+    }
+
+    .image {
+        margin-top:70%;
+  
+    }
+}
+  

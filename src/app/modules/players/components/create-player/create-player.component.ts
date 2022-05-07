@@ -36,7 +36,7 @@ export class CreatePlayerComponent implements OnInit {
 
   submit() {
     this.playerService.createPlayer(this.myForm.value);
-    localStorage.setItem("confirm",`Se ha añadido al jugado ${this.myForm.value.name} ${this.myForm.value.surname} con éxito`);
+    localStorage.setItem("confirm",`Se ha añadido al jugador ${this.myForm.value.name} ${this.myForm.value.surname} con éxito`);
     this.router.navigate( ['players/list'] );
   }
 }

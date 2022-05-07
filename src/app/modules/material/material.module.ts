@@ -14,6 +14,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -32,7 +33,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatExpansionModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatCardModule
   ]
 })
 export class MaterialModule { }

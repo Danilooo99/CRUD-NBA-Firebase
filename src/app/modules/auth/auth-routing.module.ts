@@ -1,22 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from 'src/app/components/dashboard/dashboard.component';
-import { PresentationComponent } from './components/presentation/presentation.component';
-
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
-  { 
+  {
     path: '', 
     component: DashboardComponent,
     children: [
-      { path: 'presentation', component:  PresentationComponent},
-      { path: '**', redirectTo: 'presentation'},
+      { path: 'login', component:  LoginComponent},
+      { path: 'register', component:  RegisterComponent},
+      { path: '**', redirectTo: 'login'},
     ]
-  },
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomeRoutingModule { }
+export class AuthRoutingModule { }

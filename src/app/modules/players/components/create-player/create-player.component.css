@@ -21,16 +21,22 @@
     margin-bottom: 5%;
 }
 
-textarea {
-    height: 170px;
+form {
+    background-color: white;
+    width: 45%;
 }
+
 
 mat-form-field {
     margin-top: 1%;
 }
 
-@media screen and (max-width: 750px) {
-    .edit-form mat-form-field {
+@media screen and (max-width: 900px) {
+    .create-form mat-form-field {
         width: 50%;
+    }
+
+    .create-form {
+        width:90%;
     }
 }

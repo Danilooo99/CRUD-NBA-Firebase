@@ -1,1 +1,25 @@
-<p>presentation works!</p>
+<h1 class="title">¡Bienvenido a la App para gestionar a los jugadores de la NBA!</h1>
+
+
+
+<div class="button-section">
+    <mat-card>
+        <p>
+            Hola, mi nombre es Danilo Rivero Pérez y he diseñado una aplicación
+            para gestionar los diferentes jugadores de la NBA. Los jugadores y sus datos se guardan en una base de datos 
+            (FireStore) y además se ha hecho uso de la carga perezoza (lazy load) para mejorar el rendimiento
+            de la aplicación. 
+            Con esta aplicación, se pueden añadir nuevos jugadores, editar los datos de un jugador, eliminar jugadores y ver el listado
+            de jugadores de la NBA.
+            Para acceder al listado de jugadores de la NBA se puede realizar de dos
+            formas: Haciendo <strong>clic en el botón de más abajo llamado "Ver jugadores"</strong>
+            o bien, <strong>accediendo a tráves del menú de navegación a "Jugadores NBA"</strong>.
+            Un saludo y espero que les guste.
+        </p>
+        <button routerLink="/players/list" mat-raised-button color="primary">Ver jugadores</button>
+    </mat-card>
+</div>
+
+<div class="image">
+    <img src="../../../../../assets/images/logo-nba.jpeg" alt="NBA Logo">
+</div>
