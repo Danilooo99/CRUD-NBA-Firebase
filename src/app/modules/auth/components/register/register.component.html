@@ -4,8 +4,8 @@
     <form [formGroup]="signupForm" (ngSubmit)="signup()">
         <p>
             <mat-form-field appearance="outline">
-                <mat-label>Full Name</mat-label>
-                <input autocomplete="off" formControlName="displayName" type="text" matInput placeholder="Display Name">
+                <mat-label>Nombre de usuario</mat-label>
+                <input autocomplete="off" formControlName="displayName" type="text" matInput placeholder="Nombre">
             </mat-form-field>
         </p>
         <p>
@@ -16,7 +16,7 @@
         </p>
         <p>
             <mat-form-field appearance="outline">
-                <mat-label>Password</mat-label>
+                <mat-label>Contraseña</mat-label>
                 <input autocomplete="off" formControlName="password" type="password" matInput placeholder="Contraseña">
             </mat-form-field>
         </p>
