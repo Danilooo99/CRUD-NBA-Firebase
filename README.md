@@ -20,7 +20,6 @@ Se ha creado una aplicación que gestiona los diferentes jugadores de la NBA. Lo
 - La aplicación cuenta con un ```inicio de sesión``` y un ```registro```.
 
 
-
 ### Credenciales para iniciar sesión
 
 Se han creado dos usuarios con los que se puede iniciar sesión en la aplicación para poder usarla. Las credenciales de estos dos usuarios son:
